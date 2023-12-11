@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    background-color: #000000;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+
+.form input {
+    background-color: rgb(33, 37, 43);
+    height: 34px;
+    width: 300px;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 18px;
+    padding-right: 10px;
+    text-transform: capitalize;
+    border: none;
+    transition: 1s;
+}
+
+.form input:focus {
+    background-color: rgb(136, 137, 139);
+    color: black;
+}
+
+.movies-box {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.movies{
+    position: relative;
+}
+
+.movies img {
+    height: 290px;
+    width: 210px;
+    border-radius: 5PX;
+}
+
+.overlay {
+    background-color: white;
+    color: black;
+    width: 210px;
+    height: auto;
+    position: absolute;
+    top: 70px;
+    opacity: 0.8;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    display: block;
+    height: 0;
+    transition: height 0.5s;
+}
+
+.overlay-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overlay h1,span{
+    font-size: 22px;
+    margin: 5px 5px;
+}
+
+.overview{
+    text-align: center;
+}
+
+.overview h1{
+    font-size: 22px;
+}
+
+.movies:hover .overlay{
+    height: 220px;
+    transform: height 1s;
+}
+
+@media only screen and (max-width: 600px){
+    .movies img {
+        height: 150px;
+        width: 100px;
+        border-radius: 5px;
+    }
+
+    .movies{
+        overflow: hidden;
+        
+    }
+
+    .overlay{
+        width: 100px;
+        height: 150px;
+        font-size: 10px;
+        top: 30px;
+        height: 0;
+        transition: height 1s;
+    }
+
+    .movies:hover .overlay{
+        height: 150px;
+        transform: height 1s;
+    }
+
+    .overlay h1,span{
+        font-size: 12px;
+        margin: 5px 5px;
+    }
+    
+}
+
+
